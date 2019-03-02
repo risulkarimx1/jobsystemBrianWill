@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1efd5860-7010-4687-848d-c6707286073e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JobDemo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JobDemo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ECS_BiranWill/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ECS_BiranWill/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,17 +15,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/JobDemo.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+            <state relative-caret-position="466">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
               <folding>
-                <marker date="1551565244577" expanded="false" signature="6:121" ph="..." />
-                <marker date="1551565244577" expanded="true" signature="159:1330" ph="{...}" />
-                <marker date="1551565244577" expanded="true" signature="186:441" ph="{...}" />
-                <marker date="1551565244577" expanded="true" signature="304:436" ph="{...}" />
-                <marker date="1551565244577" expanded="true" signature="568:1206" ph="{...}" />
-                <marker date="1551565244577" expanded="true" signature="666:801" ph="{...}" />
-                <marker date="1551565244577" expanded="true" signature="839:976" ph="{...}" />
-                <marker date="1551565244577" expanded="true" signature="1236:1328" ph="{...}" />
+                <marker date="1551567559493" expanded="false" signature="6:121" ph="..." />
+                <marker date="1551567559493" expanded="true" signature="159:1348" ph="{...}" />
+                <marker date="1551567559493" expanded="true" signature="186:441" ph="{...}" />
+                <marker date="1551567559493" expanded="true" signature="304:436" ph="{...}" />
+                <marker date="1551567559493" expanded="true" signature="568:1222" ph="{...}" />
+                <marker date="1551567559493" expanded="true" signature="666:801" ph="{...}" />
+                <marker date="1551567559493" expanded="true" signature="839:976" ph="{...}" />
+                <marker date="1551567559493" expanded="true" signature="1086:1215" ph="/* JobHandle combinedJobholder = JobHandle.CombineDependencies(jobHandle, jobHandle2); ... */" />
+                <marker date="1551567559493" expanded="true" signature="1252:1346" ph="{...}" />
+                <marker date="1551567559493" expanded="true" signature="1264:1318" ph="/* jobHandle.Complete(); ... */" />
               </folding>
             </state>
           </provider>
@@ -112,12 +114,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551555585669</updated>
-      <workItem from="1551555590033" duration="4679000" />
+      <workItem from="1551555590033" duration="6547000" />
     </task>
+    <task id="LOCAL-00001" summary="[E1] we can combined tasks">
+      <created>1551567593663</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551567593663</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4679000" />
+    <option name="totallyTimeSpent" value="6547000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -167,6 +177,10 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[E1] we can combined tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="[E1] we can combined tasks" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -180,17 +194,19 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/JobDemo.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+        <state relative-caret-position="466">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
           <folding>
-            <marker date="1551565244577" expanded="false" signature="6:121" ph="..." />
-            <marker date="1551565244577" expanded="true" signature="159:1330" ph="{...}" />
-            <marker date="1551565244577" expanded="true" signature="186:441" ph="{...}" />
-            <marker date="1551565244577" expanded="true" signature="304:436" ph="{...}" />
-            <marker date="1551565244577" expanded="true" signature="568:1206" ph="{...}" />
-            <marker date="1551565244577" expanded="true" signature="666:801" ph="{...}" />
-            <marker date="1551565244577" expanded="true" signature="839:976" ph="{...}" />
-            <marker date="1551565244577" expanded="true" signature="1236:1328" ph="{...}" />
+            <marker date="1551567559493" expanded="false" signature="6:121" ph="..." />
+            <marker date="1551567559493" expanded="true" signature="159:1348" ph="{...}" />
+            <marker date="1551567559493" expanded="true" signature="186:441" ph="{...}" />
+            <marker date="1551567559493" expanded="true" signature="304:436" ph="{...}" />
+            <marker date="1551567559493" expanded="true" signature="568:1222" ph="{...}" />
+            <marker date="1551567559493" expanded="true" signature="666:801" ph="{...}" />
+            <marker date="1551567559493" expanded="true" signature="839:976" ph="{...}" />
+            <marker date="1551567559493" expanded="true" signature="1086:1215" ph="/* JobHandle combinedJobholder = JobHandle.CombineDependencies(jobHandle, jobHandle2); ... */" />
+            <marker date="1551567559493" expanded="true" signature="1252:1346" ph="{...}" />
+            <marker date="1551567559493" expanded="true" signature="1264:1318" ph="/* jobHandle.Complete(); ... */" />
           </folding>
         </state>
       </provider>

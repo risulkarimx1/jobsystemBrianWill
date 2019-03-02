@@ -42,15 +42,19 @@ public class JobDemo : MonoBehaviour
          
       };
       jobHandle = tj.Schedule();
-      jobHandle2 = tj2.Schedule(jobHandle);
+      jobHandle2 = tj2.Schedule();
       JobHandle.ScheduleBatchedJobs();
-      
+
+//      JobHandle combinedJobholder = JobHandle.CombineDependencies(jobHandle, jobHandle2);
+//      combinedJobholder.Complete();
+
+
    }
 
    private void LateUpdate()
    {
       //jobHandle.Complete();
-      jobHandle2.Complete();
+//      jobHandle2.Complete();
       array.Dispose();
    }
 }

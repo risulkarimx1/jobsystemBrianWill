@@ -42,18 +42,15 @@ public class JobDemo : MonoBehaviour
          
       };
       jobHandle = tj.Schedule();
+      jobHandle.Complete();
       jobHandle2 = tj2.Schedule();
       JobHandle.ScheduleBatchedJobs();
-      
-      jobHandle.Complete();
-
-      Debug.Log($"value of x is {tj.array[0]}");
    
    }
 
    private void LateUpdate()
    {
-      jobHandle.Complete();
+      //jobHandle.Complete();
       jobHandle2.Complete();
       array.Dispose();
    }

@@ -20,22 +20,31 @@ public class JobDemo : MonoBehaviour
       }
    }
 
-   private void Start()
+   private NativeArray<int> array;
+   private JobHandle jobHandle;
+   private void Update()
    {
+      array = new NativeArray<int>(1,Allocator.TempJob);
       var tj = new TestJob()
       {
          x = 3,
          y = 5,
-         array = new NativeArray<int>(1,Allocator.TempJob)// deletes them from memory if they live longer than 4 frames
+         array = array// deletes them from memory if they live longer than 4 frames
          
       };
 
-      var jobHandle = tj.Schedule();
+      jobHandle = tj.Schedule();
       JobHandle.ScheduleBatchedJobs();
       
       jobHandle.Complete();
 
       Debug.Log($"value of x is {tj.array[0]}");
-      tj.array.Dispose();
+   
+   }
+
+   private void LateUpdate()
+   {
+      jobHandle.Complete();
+      array.Dispose();
    }
 }

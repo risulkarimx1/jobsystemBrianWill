@@ -22,6 +22,8 @@ public class JobDemo : MonoBehaviour
 
    private NativeArray<int> array;
    private JobHandle jobHandle;
+   private JobHandle jobHandle2;
+
    private void Update()
    {
       array = new NativeArray<int>(1,Allocator.TempJob);
@@ -32,8 +34,15 @@ public class JobDemo : MonoBehaviour
          array = array// deletes them from memory if they live longer than 4 frames
          
       };
-
+      var tj2 = new TestJob()
+      {
+         x = 11,
+         y = 12,
+         array = array// deletes them from memory if they live longer than 4 frames
+         
+      };
       jobHandle = tj.Schedule();
+      jobHandle2 = tj2.Schedule();
       JobHandle.ScheduleBatchedJobs();
       
       jobHandle.Complete();
@@ -45,6 +54,7 @@ public class JobDemo : MonoBehaviour
    private void LateUpdate()
    {
       jobHandle.Complete();
+      jobHandle2.Complete();
       array.Dispose();
    }
 }

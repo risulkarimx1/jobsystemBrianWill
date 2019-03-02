@@ -42,10 +42,9 @@ public class JobDemo : MonoBehaviour
          
       };
       jobHandle = tj.Schedule();
-      jobHandle.Complete();
-      jobHandle2 = tj2.Schedule();
+      jobHandle2 = tj2.Schedule(jobHandle);
       JobHandle.ScheduleBatchedJobs();
-   
+      
    }
 
    private void LateUpdate()

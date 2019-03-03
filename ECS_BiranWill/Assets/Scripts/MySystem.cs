@@ -26,24 +26,14 @@ public class MySystem :ComponentSystem
         World world = World.Active;
         EntityManager em = world.GetOrCreateManager<EntityManager>();
 
-        Entity entity = em.CreateEntity();
+        EntityArchetype archetype = EntityManager.CreateArchetype(typeof(MyComponent), typeof(OtherComponent));
+
+        Entity entity = em.CreateEntity(archetype);
 
         int index = entity.Index;
         int version = entity.Version;
 
         Debug.Log($"index {index} and version {version}");
-        /////////
-        
-        em.AddComponent(entity,typeof(MyComponent));
-
-        MyComponent myComponent = em.GetComponentData<MyComponent>(entity);
-
-        float f = myComponent.Num; // getting default value 0
-        
-        em.SetComponentData<MyComponent>(entity,new MyComponent(){Num = 3.0f}); // setting to 3
-
-        Debug.Log($"value now is: {em.GetComponentData<MyComponent>(entity).Num}");
-        em.RemoveComponent<MyComponent>(entity);
 
     }
 

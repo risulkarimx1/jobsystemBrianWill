@@ -3,58 +3,42 @@ using System.Collections.Generic;
 using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
+using Random = System.Random;
 
 public class JobDemo : MonoBehaviour
 {
-   struct TestJob : IJob
-   {
-      public int x;
-      public int y;
+    struct RandomNumberMaker: IJobParallelFor
+    {
+        public NativeArray<float> _array;
+        public void Execute(int index)
+        {
+            _array[index] =  new System.Random().Next()*10f; //Mathf.Sin(_array[index]);
+        }
+    }
 
-      public NativeArray<int> array;
-      
-      public void Execute()
-      {
-         array[0] = x + y;
-         Debug.Log($"Hi I am from job: {array[0]}"); // smaggle out via native container
-      }
-   }
+    private NativeArray<float> inputArray;
+    private JobHandle _jobHandle;
 
-   private NativeArray<int> array;
-   private JobHandle jobHandle;
-   private JobHandle jobHandle2;
+    private void Update()
+    {
+        inputArray = new NativeArray<float>(100,Allocator.TempJob);
+        for (int i = 0; i < inputArray.Length; i++)
+        {
+            inputArray[i] = i;
+        }
+        
+        RandomNumberMaker rnJob =new RandomNumberMaker()
+        {
+            _array =  inputArray
+        };
+        _jobHandle = rnJob.Schedule(inputArray.Length, 32);
+        JobHandle.ScheduleBatchedJobs();
+    }
 
-   private void Update()
-   {
-      array = new NativeArray<int>(1,Allocator.TempJob);
-      var tj = new TestJob()
-      {
-         x = 3,
-         y = 5,
-         array = array// deletes them from memory if they live longer than 4 frames
-         
-      };
-      var tj2 = new TestJob()
-      {
-         x = 11,
-         y = 12,
-         array = array// deletes them from memory if they live longer than 4 frames
-         
-      };
-      jobHandle = tj.Schedule();
-      jobHandle2 = tj2.Schedule();
-      JobHandle.ScheduleBatchedJobs();
-
-//      JobHandle combinedJobholder = JobHandle.CombineDependencies(jobHandle, jobHandle2);
-//      combinedJobholder.Complete();
-
-
-   }
-
-   private void LateUpdate()
-   {
-      //jobHandle.Complete();
-//      jobHandle2.Complete();
-      array.Dispose();
-   }
+    private void LateUpdate()
+    {
+        _jobHandle.Complete();
+        Debug.Log($"value of 5th index {inputArray[5]}");
+        inputArray.Dispose();
+    }
 }

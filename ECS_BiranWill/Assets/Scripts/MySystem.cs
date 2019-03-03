@@ -4,6 +4,8 @@ using Unity.Entities;
 using UnityEngine;
 
 
+
+
 public class MySystem :ComponentSystem
 {
     protected override void OnCreateManager()
@@ -13,7 +15,15 @@ public class MySystem :ComponentSystem
 
     protected override void OnUpdate()
     {
-        Debug.Log($"hi from update");
+        World world = World.Active;
+        EntityManager em = world.GetOrCreateManager<EntityManager>();
+
+        Entity entity = em.CreateEntity();
+
+        int index = entity.Index;
+        int version = entity.Version;
+
+        Debug.Log($"index {index} and version {version}");
     }
 
     protected override void OnDestroyManager()
@@ -23,20 +33,3 @@ public class MySystem :ComponentSystem
 }
 
 
-public class MySystem2 :ComponentSystem
-{
-    protected override void OnCreateManager()
-    {
-        Debug.Log($"Created2");
-    }
-
-    protected override void OnUpdate()
-    {
-        Debug.Log($"hi from update2");
-    }
-
-    protected override void OnDestroyManager()
-    {
-        Debug.Log($"Destroyed2");
-    }
-}

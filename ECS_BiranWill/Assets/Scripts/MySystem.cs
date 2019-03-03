@@ -19,6 +19,7 @@ public struct SomeComponent : IComponentData
     public int Num;
 }
 
+[UpdateBefore(typeof(MyBarrier))]
 public class MySystem :ComponentSystem
 {
     private ComponentGroup _group;
@@ -48,24 +49,25 @@ public class MySystem :ComponentSystem
 
     }
 
+    [Inject] private MyBarrier _myBarrier;
     protected override void OnUpdate()
     {
         ComponentDataArray<MyComponent> myComponents = _group.GetComponentDataArray<MyComponent>();
         ComponentDataArray<OtherComponent> otherComponents = _group.GetComponentDataArray<OtherComponent>();
 
         EntityArray entities = _group.GetEntityArray();
+
+        EntityCommandBuffer cmds = _myBarrier.CreateCommandBuffer();
+        
         for (int i = 0; i < myComponents.Length; i++)
         {
             // we can read component data
             Entity entity = entities[i];
             MyComponent myComponent = myComponents[i];
             OtherComponent otherComponent = otherComponents[i];
-            // we can mutate component data
-            otherComponents[i] = new OtherComponent(){Num =  55};
-            
-            /// we can destroy entity manager while iterating
-            // we can user something call entitiy command buffer 
-            PostUpdateCommands.DestroyEntity(entity);
+           
+            cmds.DestroyEntity(entity);
+           
         }
     }
 
@@ -73,6 +75,10 @@ public class MySystem :ComponentSystem
     {
         Debug.Log($"Destroyed");
     }
+}
+
+public class MyBarrier : BarrierSystem
+{
 }
 
 

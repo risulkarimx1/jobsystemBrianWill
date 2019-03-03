@@ -4,7 +4,15 @@ using Unity.Entities;
 using UnityEngine;
 
 
+public struct MyComponent : IComponentData
+{
+    public float Num;
+}
 
+public struct OtherComponent : IComponentData
+{
+    public int Num;
+}
 
 public class MySystem :ComponentSystem
 {
@@ -24,6 +32,19 @@ public class MySystem :ComponentSystem
         int version = entity.Version;
 
         Debug.Log($"index {index} and version {version}");
+        /////////
+        
+        em.AddComponent(entity,typeof(MyComponent));
+
+        MyComponent myComponent = em.GetComponentData<MyComponent>(entity);
+
+        float f = myComponent.Num; // getting default value 0
+        
+        em.SetComponentData<MyComponent>(entity,new MyComponent(){Num = 3.0f}); // setting to 3
+
+        Debug.Log($"value now is: {em.GetComponentData<MyComponent>(entity).Num}");
+        em.RemoveComponent<MyComponent>(entity);
+
     }
 
     protected override void OnDestroyManager()

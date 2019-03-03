@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1efd5860-7010-4687-848d-c6707286073e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ECS_BiranWill/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ECS_BiranWill/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,23 +11,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/JobDemo.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="510">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
               <folding>
-                <marker date="1551567559493" expanded="false" signature="6:121" ph="..." />
-                <marker date="1551567559493" expanded="true" signature="159:1348" ph="{...}" />
-                <marker date="1551567559493" expanded="true" signature="186:441" ph="{...}" />
-                <marker date="1551567559493" expanded="true" signature="304:436" ph="{...}" />
-                <marker date="1551567559493" expanded="true" signature="568:1222" ph="{...}" />
-                <marker date="1551567559493" expanded="true" signature="666:801" ph="{...}" />
-                <marker date="1551567559493" expanded="true" signature="839:976" ph="{...}" />
-                <marker date="1551567559493" expanded="true" signature="1086:1215" ph="/* JobHandle combinedJobholder = JobHandle.CombineDependencies(jobHandle, jobHandle2); ... */" />
-                <marker date="1551567559493" expanded="true" signature="1252:1346" ph="{...}" />
-                <marker date="1551567559493" expanded="true" signature="1264:1318" ph="/* jobHandle.Complete(); ... */" />
+                <marker date="1551569150929" expanded="false" signature="6:151" ph="..." />
+                <marker date="1551569150929" expanded="true" signature="189:1112" ph="{...}" />
+                <marker date="1551569150929" expanded="true" signature="237:439" ph="{...}" />
+                <marker date="1551569150929" expanded="true" signature="324:433" ph="{...}" />
+                <marker date="1551569150929" expanded="true" signature="544:948" ph="{...}" />
+                <marker date="1551569150929" expanded="true" signature="670:721" ph="{...}" />
+                <marker date="1551569150929" expanded="true" signature="796:840" ph="{...}" />
+                <marker date="1551569150929" expanded="true" signature="979:1110" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MySystem.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <marker date="1551617143962" expanded="false" signature="6:100" ph="..." />
+                <marker date="1551617143962" expanded="true" signature="188:231" ph="{...}" />
+                <marker date="1551617143962" expanded="true" signature="271:321" ph="{...}" />
+                <marker date="1551617143962" expanded="true" signature="369:414" ph="{...}" />
+                <marker date="1551617143962" expanded="true" signature="458:737" ph="{...}" />
+                <marker date="1551617143962" expanded="true" signature="506:550" ph="{...}" />
+                <marker date="1551617143962" expanded="true" signature="590:641" ph="{...}" />
+                <marker date="1551617143962" expanded="true" signature="689:735" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -39,12 +56,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MySystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/JobDemo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/JobDemo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MySystem.cs" />
       </list>
     </option>
   </component>
@@ -60,14 +79,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
       <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
       </pane>
     </panes>
   </component>
@@ -115,6 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1551555585669</updated>
       <workItem from="1551555590033" duration="6547000" />
+      <workItem from="1551616606946" duration="549000" />
     </task>
     <task id="LOCAL-00001" summary="[E1] we can combined tasks">
       <created>1551567593663</created>
@@ -127,7 +147,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6547000" />
+    <option name="totallyTimeSpent" value="7096000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -142,20 +162,11 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09381663" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09488273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -163,13 +174,22 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Unity" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Unit Tests" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,19 +214,34 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/JobDemo.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="510">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
           <folding>
-            <marker date="1551567559493" expanded="false" signature="6:121" ph="..." />
-            <marker date="1551567559493" expanded="true" signature="159:1348" ph="{...}" />
-            <marker date="1551567559493" expanded="true" signature="186:441" ph="{...}" />
-            <marker date="1551567559493" expanded="true" signature="304:436" ph="{...}" />
-            <marker date="1551567559493" expanded="true" signature="568:1222" ph="{...}" />
-            <marker date="1551567559493" expanded="true" signature="666:801" ph="{...}" />
-            <marker date="1551567559493" expanded="true" signature="839:976" ph="{...}" />
-            <marker date="1551567559493" expanded="true" signature="1086:1215" ph="/* JobHandle combinedJobholder = JobHandle.CombineDependencies(jobHandle, jobHandle2); ... */" />
-            <marker date="1551567559493" expanded="true" signature="1252:1346" ph="{...}" />
-            <marker date="1551567559493" expanded="true" signature="1264:1318" ph="/* jobHandle.Complete(); ... */" />
+            <marker date="1551569150929" expanded="false" signature="6:151" ph="..." />
+            <marker date="1551569150929" expanded="true" signature="189:1112" ph="{...}" />
+            <marker date="1551569150929" expanded="true" signature="237:439" ph="{...}" />
+            <marker date="1551569150929" expanded="true" signature="324:433" ph="{...}" />
+            <marker date="1551569150929" expanded="true" signature="544:948" ph="{...}" />
+            <marker date="1551569150929" expanded="true" signature="670:721" ph="{...}" />
+            <marker date="1551569150929" expanded="true" signature="796:840" ph="{...}" />
+            <marker date="1551569150929" expanded="true" signature="979:1110" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MySystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <marker date="1551617143962" expanded="false" signature="6:100" ph="..." />
+            <marker date="1551617143962" expanded="true" signature="188:231" ph="{...}" />
+            <marker date="1551617143962" expanded="true" signature="271:321" ph="{...}" />
+            <marker date="1551617143962" expanded="true" signature="369:414" ph="{...}" />
+            <marker date="1551617143962" expanded="true" signature="458:737" ph="{...}" />
+            <marker date="1551617143962" expanded="true" signature="506:550" ph="{...}" />
+            <marker date="1551617143962" expanded="true" signature="590:641" ph="{...}" />
+            <marker date="1551617143962" expanded="true" signature="689:735" ph="{...}" />
           </folding>
         </state>
       </provider>

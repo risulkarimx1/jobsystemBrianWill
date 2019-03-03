@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="JobDemo.cs" t="Include" />
+          <e p="MySystem.cs" t="Include" />
         </e>
       </e>
       <e p="ECS_BiranWill.sln" t="IncludeFlat" />
